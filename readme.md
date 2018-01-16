@@ -2,13 +2,28 @@
 
 Componente para ionic que muestra botones horizontales con scroll para seleccionar. Se devuelve el indice del boton seleccionado.
 
-Instalar:
+- Instalar:
 
 ```
-npm install --save @4r/horizontal-spinner
+npm install --save github:4rsoluciones/horizontal-spinner
 ```
 
-Importar el módulo en cada módulo en el que se quiera utilizar
+- Recordar que para que compile las dependencia propias (librerías de 4r) se debe modificar eel archivo *tsconfig.json*:
+```
+...
+"include": [
+    "src/**/*.ts",
+    "node_modules/@4r/**/*.ts"
+  ],
+  "exclude":[
+    "/node_modules(?!(\/|\\)@4r)/"
+  ],
+  ...
+]
+...
+```
+
+- Importar el módulo en cada módulo en el que se quiera utilizar
 
 ```
 import {HorizontalSpinnerModule} from "@4r/horizontal-spinner/horizontal-spinner.module";
@@ -22,7 +37,7 @@ import {HorizontalSpinnerModule} from "@4r/horizontal-spinner/horizontal-spinner
 })
 ```
 
-Modo de uso:
+- Modo de uso:
 
 ```
 <ion-content>
