@@ -25,7 +25,11 @@ export class HorizontalSpinnerComponent implements ControlValueAccessor {
   selected = new EventEmitter();
 
   optionClicked(op) {
-    this.value = op;
+    if (this.value === op) {
+      this.value = null;
+    } else {
+      this.value = op;
+    }
   }
 
   get value(): any {

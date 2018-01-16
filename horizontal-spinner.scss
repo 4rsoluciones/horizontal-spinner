@@ -10,8 +10,8 @@ horizontal-spinner {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      color: grey;
-      background-color: lightgrey;
+      color: #cccccc;
+      background-color: #f9f9f9;
       padding: 3px;
       .hs-icon {
         font-size: 1em;
@@ -28,7 +28,8 @@ horizontal-spinner {
       }
     }
     .hs-selected {
-      background-color: #222222;
+      color: white;
+      background-color: #333333;
     }
   }
 }
