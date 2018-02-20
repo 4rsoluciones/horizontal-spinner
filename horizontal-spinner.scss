@@ -5,17 +5,23 @@ horizontal-spinner {
     font-size: 14px;
     .hs-option {
       margin: 2px;
-      border-radius: 5px;
+      border-radius: 2px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      color: #cccccc;
-      background-color: #f9f9f9;
+      color: #999999;
+      border: 2px solid #eeeeee;
       padding: 3px;
       .hs-icon {
         font-size: 1em;
         padding: 1px;
+      }
+      .hs-image {
+        width: 80%;
+        height: 80%;
+        margin: 8px;
+        object-fit: cover;
       }
       .hs-text-container {
         .hs-title {
@@ -27,9 +33,15 @@ horizontal-spinner {
         }
       }
     }
+    &.hs-not-selected {
+      .hs-option {
+        opacity: .5;
+      }
+    }
     .hs-selected {
-      color: white;
-      background-color: #333333;
+      opacity: 1 !important;
+      color: color($colors, primary);
+      border-color: color($colors, primary);
     }
   }
 }

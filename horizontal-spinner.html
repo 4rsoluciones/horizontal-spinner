@@ -1,7 +1,8 @@
-<div class="hs-container">
+<div class="hs-container" [ngClass]="innerValue != null ? 'hs-not-selected' : ''">
   <div *ngFor="let i = index; let op of options" class="hs-option" [ngStyle]="{'width.px': width}"
        (click)="optionClicked(i)" [ngClass]="(innerValue == i) ? 'hs-selected' : ''">
     <ion-icon *ngIf="op.icon" name="{{op.icon}}" class="hs-icon"></ion-icon>
+    <img *ngIf="op.img" src="{{op.img}}" class="hs-image">
     <div class="hs-text-container" [ngStyle]="{'text-align': align}">
       <div *ngIf="op.title" class="hs-title">{{op.title}}</div>
       <div *ngIf="op.subtitle" class="hs-subtitle">{{op.subtitle}}</div>
