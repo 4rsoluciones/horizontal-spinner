@@ -41,7 +41,7 @@ import {HorizontalSpinnerModule} from "@4r/horizontal-spinner/horizontal-spinner
 
 ```
 <ion-content>
-  <horizontal-spinner [options]="options" width="100" align="left" [(ngModel)]="selectedOption"></horizontal-spinner>
+  <horizontal-spinner [options]="options" width="100" align="left" textTop="true" [(ngModel)]="selectedOption"></horizontal-spinner>
 </ion-content>
 ```
 
@@ -49,7 +49,10 @@ import {HorizontalSpinnerModule} from "@4r/horizontal-spinner/horizontal-spinner
 
 Attr | Type | Details
 --- | --- | ---
-options | `Array<{title?: string, subtitle?: string, icon?: string}>` | Detalles de los botones a mostrar
+options | `Array<{title?: string, subtitle?: string, icon?: string, img?: string}>` | Detalles de los botones a mostrar
 width | `number` | Ancho fijo que tendra cada botón
 align | `string` | `'left'`, `'center'`, o `'right'`. La alineación del título y subtítulo con respecto a ellos cuando ambos existen
+textTop | `boolean` | Si es true el texto va por encima de la imagen o icono
 
+## Output
+Indice de la opción seleccionada

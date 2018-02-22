@@ -32,6 +32,9 @@ horizontal-spinner {
           padding: 1px;
         }
       }
+      &.reverse {
+        flex-direction: column-reverse;
+      }
     }
     &.hs-not-selected {
       .hs-option {
