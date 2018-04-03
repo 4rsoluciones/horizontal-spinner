@@ -6,7 +6,7 @@ const noop = () => {
 
 @Component({
   selector: 'horizontal-spinner',
-  inputs: ['options', 'width', 'align', 'textTop'],
+  inputs: ['options', 'width', 'align', 'textTop', 'disabled'],
   templateUrl: 'horizontal-spinner.html',
   outputs: ['selected'],
   providers: [{provide: NG_VALUE_ACCESSOR, useExisting: HorizontalSpinnerComponent, multi: true}]
@@ -22,14 +22,17 @@ export class HorizontalSpinnerComponent implements ControlValueAccessor {
   width: number;
   align: string;
   textTop: boolean;
+  disabled: boolean;
 
   selected = new EventEmitter();
 
   optionClicked(op) {
-    if (this.value === op) {
-      this.value = null;
-    } else {
-      this.value = op;
+    if (!this.disabled) {
+      if (this.value === op) {
+        this.value = null;
+      } else {
+        this.value = op;
+      }
     }
   }
 

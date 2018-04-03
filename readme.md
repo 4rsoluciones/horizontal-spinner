@@ -53,6 +53,7 @@ options | `Array<{title?: string, subtitle?: string, icon?: string, img?: string
 width | `number` | Ancho fijo que tendra cada botón
 align | `string` | `'left'`, `'center'`, o `'right'`. La alineación del título y subtítulo con respecto a ellos cuando ambos existen
 textTop | `boolean` | Si es true el texto va por encima de la imagen o icono
+disabled | `boolean` | Default `false`
 
 ## Output
 Indice de la opción seleccionada
